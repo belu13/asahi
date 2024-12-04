@@ -1,0 +1,240 @@
+/* Reset de márgenes y padding */
+img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body y fondo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+/* Contenedor Principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Bento Box Principal */
+.bento-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border: 2px solid #7d0202; /* Bordes para destacar los Bento Boxes */
+}
+
+/* Bento Box Interior (para elementos dentro de un Bento Box) */
+.bento-box-content {
+    width: 100%;
+    max-width: 45%;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    border: 2px solid #7d0202; /* Bordes para destacar los Bento Boxes */
+}
+.bento-box2-content {
+    width: 100%;
+    max-width: 45%;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: right;
+    border: 2px solid #7d0202; /* Bordes para destacar los Bento Boxes */
+}
+.bento-box-content h4 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilo para las imágenes dentro de Bento Boxes */
+.bento-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Bordes redondeados para las imágenes */
+    object-fit: cover; /* Mantener proporción sin distorsión */
+}
+
+/* Estilo para los contenedores de los elementos dentro de los Bento Boxes */
+.item-content {
+    padding: 10px;
+}
+
+/* Estilo para los textos dentro de los Bento Boxes */
+.box-item h4 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.box-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Formulario en Atención */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #7d0202; /* Bordes para los Bento Boxes */
+    width: 100%;
+    max-width: 500px; /* Limitar el tamaño máximo */
+    margin-top: 30px;
+}
+
+form input, form button {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+}
+
+form button {
+    background-color: #7d0202;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #7d0202;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.navbar a:hover {
+    color: #7d0202;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Estilo para las secciones de menú */
+.menu-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-item {
+    width: 100%;
+    max-width: 30%;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #7d0202; /* Bordes para destacar los Bento Boxes */
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.05); /* Efecto de hover */
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.menu-item h5 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Ajustes para Responsividad */
+@media (max-width: 768px) {
+    .bento-box {
+        flex-direction: column;
+    }
+
+    .bento-box-content {
+        max-width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+    }
+
+    .main-container {
+        padding: 10px;
+    }
+
+    .menu-item {
+        max-width: 100%;
+    }
+
+    .box-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .bento-box-content h4 {
+        font-size: 1.4rem;
+    }
+
+    .navbar a {
+        font-size: 1.1rem;
+    }
+
+    form input, form button {
+        font-size: 0.9rem;
+    }
+}
